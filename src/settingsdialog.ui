@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>427</width>
-    <height>276</height>
+    <width>604</width>
+    <height>325</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,18 +19,36 @@
    <bool>true</bool>
   </property>
   <layout class="QGridLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>11</number>
+   </property>
+   <property name="topMargin">
+    <number>11</number>
+   </property>
+   <property name="rightMargin">
+    <number>11</number>
+   </property>
+   <property name="bottomMargin">
     <number>11</number>
    </property>
    <property name="spacing">
     <number>6</number>
    </property>
    <item row="1" column="0" colspan="2">
-    <layout class="QHBoxLayout">
+    <layout class="QHBoxLayout" name="hl">
      <property name="spacing">
       <number>6</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -102,7 +120,7 @@
       <attribute name="title">
        <string>Terminal</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout">
+      <layout class="QGridLayout" name="gl_term">
        <item row="0" column="0" rowspan="3">
         <widget class="QGroupBox" name="groupBox3">
          <property name="title">
@@ -434,6 +452,15 @@ p, li { white-space: pre-wrap; }
               </color>
              </brush>
             </colorrole>
+            <colorrole role="PlaceholderText">
+             <brush brushstyle="NoBrush">
+              <color alpha="128">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
            </active>
            <inactive>
             <colorrole role="WindowText">
@@ -565,6 +592,15 @@ p, li { white-space: pre-wrap; }
             <colorrole role="ToolTipText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="PlaceholderText">
+             <brush brushstyle="NoBrush">
+              <color alpha="128">
                <red>0</red>
                <green>0</green>
                <blue>0</blue>
@@ -708,6 +744,15 @@ p, li { white-space: pre-wrap; }
               </color>
              </brush>
             </colorrole>
+            <colorrole role="PlaceholderText">
+             <brush brushstyle="NoBrush">
+              <color alpha="128">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
            </disabled>
           </palette>
          </property>
@@ -715,22 +760,6 @@ p, li { white-space: pre-wrap; }
           <string/>
          </property>
         </widget>
-       </item>
-       <item row="2" column="2" colspan="4">
-        <spacer name="spacer2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>203</width>
-           <height>60</height>
-          </size>
-         </property>
-        </spacer>
        </item>
        <item row="3" column="3">
         <spacer name="spacer3">
@@ -748,6 +777,51 @@ p, li { white-space: pre-wrap; }
          </property>
         </spacer>
        </item>
+       <item row="2" column="1" colspan="5">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Fix font size</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>size:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="spinBox">
+            <property name="minimum">
+             <number>8</number>
+            </property>
+            <property name="maximum">
+             <number>64</number>
+            </property>
+            <property name="value">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>font:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBox"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="Widget2">
@@ -756,7 +830,7 @@ p, li { white-space: pre-wrap; }
       </attribute>
       <layout class="QGridLayout">
        <item row="0" column="0">
-        <layout class="QGridLayout">
+        <layout class="QGridLayout" name="gl_device">
          <item row="1" column="3" colspan="2">
           <spacer name="spacer4">
            <property name="orientation">
@@ -1186,7 +1260,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <pixmapfunction></pixmapfunction>
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>EmulationComboBox</tabstop>
