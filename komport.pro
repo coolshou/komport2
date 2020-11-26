@@ -39,7 +39,6 @@ HEADERS += src/komport.h \
     src/ccellarray.h \
     src/cscreen.h \
     src/cemulation.h \
-    src/cemulationVT102.h \
     src/cemulationVT102.h
 
 win32{
